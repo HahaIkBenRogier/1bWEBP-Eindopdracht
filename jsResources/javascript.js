@@ -3,7 +3,7 @@
 		// Variables
 		var user_array = "Rogier";
 		var pw_array = "1234";
-		var img_array = "Rogier.png";
+		var img_array = "../imgResources/Rogier.png";
 
 		// Prompt
 		var user_input = document.getElementById('username').value;

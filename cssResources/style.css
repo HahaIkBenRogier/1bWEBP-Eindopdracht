@@ -41,7 +41,7 @@ body {
 	-webkit-border-radius: 75px;
 	width: 150px;
 	height: 150px;
-	background-image: url(unknown.png);
+	background-image: url(../imgResources/unknown.png);
 }
 
 .li-panel p.LoginErrors {
