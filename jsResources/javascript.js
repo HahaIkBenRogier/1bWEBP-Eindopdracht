@@ -69,9 +69,22 @@
 
 	function Register () {
 		// INPUT
-		var picture_input = document.getElementById("profilepic").value;
-		var surname_input = document.getElementById("surname").value;
-		var lastname_input = document.getElementById("lastname").value;
-		var username_input = document.getElementById("username").value;
+		var picture_input = document.getElementById("r-profilepic").value;
+		var surname_input = document.getElementById("r-surname").value;
+		var lastname_input = document.getElementById("lr-astname").value;
+		var username_input = document.getElementById("r-username").value;
+		var mail_input = document.getElementById("r-email").value;
+		var password_input = document.getElementById("r-password").value;
+		var passwordC_input = document.getElementById("r-password2").value;
+		var tos_input = document.getElementById("r-tos").checked;
+
+		alert("picture_input");
+		alert(picture_input);
+		alert(surname_input);
+		alert(lastname_input);
+		alert(username_input);
+		alert(password_input);
+		alert(passwordC_input);
+		alert(tos_input);
 
 	}
