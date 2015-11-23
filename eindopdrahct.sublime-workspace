@@ -1,0 +1,485 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"length_",
+				"length_m"
+			],
+			[
+				"len",
+				"length_cm"
+			],
+			[
+				"BMI",
+				"BMImelding"
+			],
+			[
+				"w2",
+				"w2lenght"
+			],
+			[
+				"w1",
+				"w1length"
+			],
+			[
+				"mari",
+				"margin"
+			],
+			[
+				"h",
+				"html	html"
+			],
+			[
+				"pw",
+				"pw2_input"
+			],
+			[
+				"user",
+				"user"
+			],
+			[
+				"team",
+				"team2"
+			],
+			[
+				"te",
+				"team2"
+			],
+			[
+				"t",
+				"team2"
+			],
+			[
+				"cels",
+				"cels2fahr"
+			],
+			[
+				"ge",
+				"geboortejaar"
+			],
+			[
+				"pr",
+				"prompt"
+			],
+			[
+				"st",
+				"style	Tag"
+			],
+			[
+				"u",
+				"ul	Tag"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"ma",
+				"margin-left"
+			],
+			[
+				"strto",
+				"strtotime"
+			],
+			[
+				"p",
+				"p	Tag"
+			],
+			[
+				"paddin",
+				"padding-left"
+			],
+			[
+				"bl",
+				"block"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"m",
+				"margin-bottom"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"bakc",
+				"background-color"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"b",
+				"border"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"di",
+				"div	Tag"
+			],
+			[
+				"pag",
+				"padding-top"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"so",
+				"solid"
+			],
+			[
+				"pd",
+				"padding-right"
+			],
+			[
+				"l",
+				"li	Tag"
+			],
+			[
+				"met",
+				"meta"
+			],
+			[
+				"borde",
+				"border-bottom"
+			],
+			[
+				"bak",
+				"background-color"
+			],
+			[
+				"head",
+				"header	Tag"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"f",
+				"ffff00"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"paddi",
+				"padding-bottom"
+			],
+			[
+				"al",
+				"alt	Attr"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"top",
+				"padding-top"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 187.0,
+		"last_filter": "html",
+		"selected_items":
+		[
+			[
+				"html",
+				"HTML: Wrap Selection With Tag"
+			],
+			[
+				"ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"Snippet: ",
+				"Snippet: html"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/B-WEBP/eindopdracht/inloggen.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/B-WEBP/eindopdracht/css.css",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/B-WEBP/les3.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/B-WEBP/1bWEBP-puzzel/puzzel1-3.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/B-WEBP/1bWEBP-puzzel/puzzel2-1.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/B-WEBP/1bWEBP-puzzel/puzzel2-2.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/B-WEBP/1bWEBP-puzzel/puzzel1-2.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/B-WEBP/1bWEBP-puzzel/puzzel1-1.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/B-WEBP/1bWEBP-puzzel/puzzel1-4.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/B-WEBP/eindopdracht func2.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/B-WEBP/eindopdracht func1.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/B-WEBP/les1.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/B-WEBP/puzzel1-4.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/B-WEBP/puzzel1-3.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/B-WEBP/puzzel1-2.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/B-WEBP/puzzel1-1.html",
+		"/Volumes/SEAGATE/Opslag/MusiKampEsmee/index.html",
+		"/Volumes/SEAGATE/Opslag/MusiKampEsmee/dl-fullhd-kamp.php",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/assets/css/top40.css",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/assets/css/eindopdracht.css",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/.htaccess",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/ingevuld.php",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/index.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/formulieren/formulier opdracht.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/top40/index.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/assets/css/untitled",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/top40/history.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/top40/composition.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/top40/records.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/assets/css/top40",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/assets/css/starwars.css",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/starwars/it_s_a_trap/references.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/starwars/it_s_a_trap/quotes.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/starwars/it_s_a_trap/index.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/starwars/it_s_a_trap/notes_trivia.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/starwars/it_s_a_trap/goofs.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/starwars/index.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/starwars/it_s_a_trap/general.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/starwars/blue_harvest/quotes.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/starwars/blue_harvest/notes_trivia.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/starwars/blue_harvest/index.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/starwars/blue_harvest/references.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/starwars/blue_harvest/general.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/starwars/blue_harvest/goofs.html",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/assets/css/font-StarJediHollow.css",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/assets/css/font-SWCrawlBody.css",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/assets/css/kook.css",
+		"/Users/sangers/OneDrive - Stichting Hogeschool Utrecht/DMC Files jaar 1/A - WEBV/EINDOPDRACHT/kookrubriek/index.html",
+		"/Users/sangers/OneDriveBusiness/DMC Files jaar 1/A - WEBV/starwars/blue_harvest/goofs.html",
+		"/Users/sangers/OneDriveBusiness/DMC Files jaar 1/A - WEBV/starwars/index.html",
+		"/Users/sangers/OneDriveBusiness/DMC Files jaar 1/A - WEBV/starwars/blue_harvest/general.html",
+		"/Users/sangers/OneDriveBusiness/DMC Files jaar 1/A - WEBV/starwars/styles/index.css",
+		"/Users/sangers/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/sangers/Downloads/YosemiteSanFranciscoFont-master/install",
+		"/Users/sangers/OneDriveBusiness/DMC Files jaar 1/A - WEBV/starwars/it_s_a_trap/index.html",
+		"/Users/sangers/OneDriveBusiness/DMC Files jaar 1/A - WEBV/starwars/something_something_something_dark_side/index.html",
+		"/Users/sangers/OneDriveBusiness/DMC Files jaar 1/A - WEBV/starwars/blue_harvest/references.html",
+		"/Users/sangers/OneDriveBusiness/DMC Files jaar 1/A - WEBV/starwars/blue_harvest/index.html",
+		"/Users/sangers/OneDriveBusiness/DMC Files jaar 1/A - WEBV/kookrubriek/styles/index.css",
+		"/Users/sangers/OneDriveBusiness/DMC Files jaar 1/A - WEBV/starwars/imgs/BlueHarvestPoster.jpg",
+		"/Users/sangers/OneDriveBusiness/DMC Files jaar 1/A - WEBV/starwars/styles/SWCrawlBody-Regular.css",
+		"/Users/sangers/OneDriveBusiness/DMC Files jaar 1/A - WEBV/starwars/styles/StarJediHollow-Regular.css"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"				",
+			"Top",
+			">\n",
+			"}\n",
+			"episodes",
+			"center",
+			"334px"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "eindopdrahct.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 1,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

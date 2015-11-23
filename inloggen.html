@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css.css">
+		<script type="text/javascript" src="js.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="sc-panel"></div>
+			<div class="li-panel">
+				<div class="Login-form"></div>
+					<img class="Login" id="profileImg">
+					<input type="text" class="Login" id="username" placeholder="Gebruikersnaam"></input>
+					<p class="LoginErrors" id="username-empty">
+						Je moet een gebruikersnaam invullen
+					</p>
+					<p class="LoginErrors" id="username-error">
+						Gebruikersnaam niet gevonden
+					</p>
+					<input type="password" class="Login" id="password" placeholder="Wachtwoord"></input>
+					<p class="LoginErrors" id="password-error">
+						Wachtwoord incorrect
+					</p>
+					<p class="LoginErrors" id="password-empty">
+						Je moet een wachtwoord invullen
+					</p>
+					<button class="Login" id="Submit" onclick="Login()">Versturen</button>
+					<br/><br/>
+					<button class="Login" id="showRegister" onclick="RegistrationPanel(1)">Registreren</button>
+				</div>
+			</div>
+			<div class="re-panel">
+				<button class="Registration" id="hideRegister" onclick="RegistrationPanel(0)">Toch maar inloggen</button>
+				<div class="Register-form">
+					<input type="file" class="Registration" id="profilepic" name="profilepic" accept="image/*">
+
+					<input type="text" class="Registration" id="surname" placeholder="Voornaam"></input>
+					<input type="text" class="Registration" id="lastname" placeholder="Achternaam"></input>
+					<input type="text" class="Registration" id="username" placeholder="Gebruikersnaam"></input>
+					<input type="mail" class="Registration" id="email" placeholder="Emailadres"></input>
+
+					<input type="password" class="Registration" id="password" placeholder="Wachtwoord"></input>
+					<input type="password" class="Registration" id="password2" placeholder="Bevestig wachtwoord"></input>
+
+					<label><input type="checkbox" name="tos" value="agree" class="Register" id="tos">Ik accepteer deze shit</label>
+					<button class="Register" id="submit" onclick="Register()">Registreren</button>
+				</div>
+			</div>
+			<div class="c-panel"></div>
+		</div>
+	</body>
+</html>
