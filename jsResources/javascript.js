@@ -3,7 +3,7 @@
 		// Variables
 		var user_array = "Rogier";
 		var pw_array = "1234";
-		var img_array = "../imgResources/Rogier.png";
+		var img_array = "imgResources/Rogier.png";
 
 		// Prompt
 		var user_input = document.getElementById('username').value;
@@ -33,12 +33,14 @@
 					else {
 						document.getElementById('password-error').style.display = "block";
 						document.getElementById('password').style.border = "thick solid red";
+						document.getElementById('password-empty').style.display = "none";	
 					}
 				}
 			}
 			else {
 				document.getElementById('username-error').style.display = "block";
 				document.getElementById('username').style.border = "thick solid red";
+				document.getElementById('username-empty').style.display = "none";
 			}
 		}
 	}
