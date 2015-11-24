@@ -6,43 +6,91 @@
 		var img_array = "imgResources/Rogier.png";
 
 		// Prompt
-		var user_input = document.getElementById('username').value;
-		var pw_input = document.getElementById('password').value;
+		var user_input = document.getElementById("username").value;
+		var pw_input = document.getElementById("password").value;
 
 		// Validation
-		if (!user_input.trim() && !pw_input.trim()) {
-			document.getElementById('username-empty').style.display = "block";
-			document.getElementById('username').style.border = "thick solid red";
-			document.getElementById('password-empty').style.display = "block";
-			document.getElementById('password').style.border = "thick solid red";
-		}
-		else if (!user_input.trim()){
-			document.getElementById('username-empty').style.display = "block";
-			document.getElementById('username').style.border = "thick solid red";
-		} else {
-			if (user_input == user_array) {
-				// Meteen aanpassen wanneer je uit dit veld gaat
-				document.getElementById('profileImg').style.backgroundImage= "url(" + img_array + ")";
-				if (!pw_input.trim()){
-					document.getElementById('password-empty').style.display = "block";
-					document.getElementById('password').style.border = "thick solid red";
-				} else {
-					if (pw_input == pw_array) {
-						window.location.href = "http://stackoverflow.com";
-					}
-					else {
-						document.getElementById('password-error').style.display = "block";
-						document.getElementById('password').style.border = "thick solid red";
-						document.getElementById('password-empty').style.display = "none";	
-					}
+		function errorLogin (field, error) {
+			console.log("errorLogin getriggerd");
+			if (field == "username") {
+				console.log("errorLogin username");
+				document.getElementById("username").style.border = "thick solid red";
+				document.getElementById('profileImg').removeAttribute("style");
+				if (error == "empty") {
+					console.log("errorLogin username empty");
+					document.getElementById("username-empty").style.display = "block";
+					document.getElementById("username-error").style.display = "none";
+				}
+				if (error == "error") {
+					console.log("errorLogin username error");
+					document.getElementById("username-error").style.display = "block";
+					document.getElementById("username-empty").style.display = "none";
 				}
 			}
-			else {
-				document.getElementById('username-error').style.display = "block";
-				document.getElementById('username').style.border = "thick solid red";
-				document.getElementById('username-empty').style.display = "none";
+			if (field == "password") {
+				console.log("errorLogin password");
+				document.getElementById("password").style.border = "thick solid red";
+				if (error == "empty") {
+					console.log("errorLogin password empty");
+					document.getElementById("password-empty").style.display = "block";
+					document.getElementById("password-error").style.display = "none";
+				}
+				if (error == "error") {
+					console.log("errorLogin password error");
+					document.getElementById("password-error").style.display = "block";
+					document.getElementById("password-empty").style.display = "none";
+				}
 			}
 		}
+		function confirmCredentials(name, value){
+			console.log("confirmCredentials");
+			window.location.href = "http://stackoverflow.com";
+		}
+		function credentialsCheck (name, value) {
+			console.log("credentialsCheck");
+			if (name == "username") {
+				console.log("credentialsCheck username");
+				if (value == user_array) {
+					console.log("credentialsCheck username goed");
+					document.getElementById("username-error").style.display = "none";
+					document.getElementById("username-empty").style.display = "none";
+					document.getElementById("username").removeAttribute("style");
+					document.getElementById('profileImg').style.backgroundImage= "url(" + img_array + ")";
+					credentialsCheck("password", pw_input);
+				} else {
+					console.log("credentialsCheck username else");
+					errorLogin(name, "error");
+				}
+			}
+			if (name == "password") {
+				console.log("credentialsCheck password");
+				if (value == pw_array) {
+					console.log("credentialsCheck password goed");
+					confirmCredentials("username", user_input);
+					document.getElementById("password").removeAttribute("style");
+					document.getElementById("password-error").style.display = "none";
+					document.getElementById("password-empty").style.display = "none";
+				} else {
+					console.log("credentialsCheck password else");
+					errorLogin(name, "error");
+				}
+			}
+		}
+		function validateField (field, value){
+			console.log("validateField");
+			if (!value.trim()) {
+				console.log(field + " leeg validateField")
+				errorLogin(field, "empty")
+			}
+			else {
+				console.log("Joe validateField");
+				credentialsCheck("username", user_input);
+			}
+		}
+
+		validateField("username",user_input);
+		validateField("password",pw_input);
+		
 	}
 
 	function RegistrationPanel (argument){
@@ -55,8 +103,6 @@
 			document.getElementsByClassName("Login")[3].disabled = "disabled";
 			document.getElementsByClassName("Login")[4].disabled = "disabled";
 		}
-
-// Registratie scherm
 		if (argument == 0) { // Hide
 			document.getElementsByClassName("re-panel")[0].removeAttribute("style");
 			document.getElementsByClassName("c-panel")[0].removeAttribute("style");
