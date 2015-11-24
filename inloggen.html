@@ -5,49 +5,48 @@
 		<link rel="stylesheet" type="text/css" href="cssResources/style.css">
 		<script type="text/javascript" src="jsResources/javascript.js"></script>
 	</head>
-	<body>
-		<div class="wrapper">
-			<div class="sc-panel"></div>
-			<div class="li-panel">
-				<div class="Login-form"></div>
-					<img class="Login" id="profileImg">
-					<input type="text" class="Login" id="username" placeholder="Gebruikersnaam"></input>
-					<p class="LoginErrors" id="username-empty">
-						Je moet een gebruikersnaam invullen
-					</p>
-					<p class="LoginErrors" id="username-error">
-						Gebruikersnaam niet gevonden
-					</p>
-					<input type="password" class="Login" id="password" placeholder="Wachtwoord"></input>
-					<p class="LoginErrors" id="password-error">
-						Wachtwoord incorrect
-					</p>
-					<p class="LoginErrors" id="password-empty">
-						Je moet een wachtwoord invullen
-					</p>
-					<button class="Login" id="Submit" onclick="Login()">Versturen</button>
-					<br/><br/>
-					<button class="Login" id="showRegister" onclick="RegistrationPanel(1)">Registreren</button>
-				</div>
+	<body onload="displayLogin()">
+		<div class="left-panel"></div>
+		<div class="middle-panel" id="LoginPanel">
+			<div class="Login-form"></div>
+				<img class="Login" id="profileImg">
+				<input type="text" class="Login" id="username" placeholder="Gebruikersnaam"></input>
+				<p class="LoginErrors" id="username-empty">
+					Je moet een gebruikersnaam invullen
+				</p>
+				<p class="LoginErrors" id="username-error">
+					Gebruikersnaam niet gevonden
+				</p>
+				<input type="password" class="Login" id="password" placeholder="Wachtwoord"></input>
+				<p class="LoginErrors" id="password-error">
+					Wachtwoord incorrect
+				</p>
+				<p class="LoginErrors" id="password-empty">
+					Je moet een wachtwoord invullen
+				</p>
+				<button class="Login" id="Submit" onclick="Login()">Versturen</button>
+				<br/><br/>
+				<button class="Login" id="showRegister" onclick="RegistrationPanel(1)">Registreren</button>
 			</div>
-			<div class="re-panel">
-				<button class="Registration" id="hideRegister" onclick="RegistrationPanel(0)">Toch maar inloggen</button>
-				<div class="Register-form">
-					<input type="file" class="Registration" id="r-profilepic" name="profilepic" accept="image/*">
-
-					<input type="text" class="Registration" id="r-surname" placeholder="Voornaam"></input>
-					<input type="text" class="Registration" id="r-lastname" placeholder="Achternaam"></input>
-					<input type="text" class="Registration" id="r-username" placeholder="Gebruikersnaam"></input>
-					<input type="mail" class="Registration" id="r-email" placeholder="Emailadres"></input>
-
-					<input type="password" class="Registration" id="r-password" placeholder="Wachtwoord"></input>
-					<input type="password" class="Registration" id="r-password2" placeholder="Bevestig wachtwoord"></input>
-
-					<label><input type="checkbox" name="tos" value="agree" class="Register" id="r-tos">Ik accepteer deze shit</label>
-					<button class="Register" id="submit" onclick="Register()">Registreren</button>
-				</div>
-			</div>
-			<div class="c-panel"></div>
 		</div>
+		<div class="middle-panel" id="StartScreen"></div>
+		<div class="right-panel" id="RegisterPanel">
+			<button class="Registration" id="hideRegister" onclick="RegistrationPanel(0)">Toch maar inloggen</button>
+			<div class="Register-form">
+				<input type="file" class="Registration" id="r-profilepic" name="profilepic" accept="image/*">
+
+				<input type="text" class="Registration" id="r-surname" placeholder="Voornaam"></input>
+				<input type="text" class="Registration" id="r-lastname" placeholder="Achternaam"></input>
+				<input type="text" class="Registration" id="r-username" placeholder="Gebruikersnaam"></input>
+				<input type="mail" class="Registration" id="r-email" placeholder="Emailadres"></input>
+
+				<input type="password" class="Registration" id="r-password" placeholder="Wachtwoord"></input>
+				<input type="password" class="Registration" id="r-password2" placeholder="Bevestig wachtwoord"></input>
+
+				<label><input type="checkbox" name="tos" value="agree" class="Register" id="r-tos">Ik accepteer deze shit</label>
+				<button class="Register" id="submit" onclick="Register()">Registreren</button>
+			</div>
+		</div>
+		<div class="container"></div>
 	</body>
 </html>
