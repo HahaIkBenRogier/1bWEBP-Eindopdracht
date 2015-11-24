@@ -1,7 +1,38 @@
-// Login Scherm
-function displayLogin() {
-	document.getElementById("LoginPanel").style.display = "block";
+function display(disp) {
+	if (disp == "Login") {
+		document.getElementById("LoginPanel").style.display = "block";
+	}
+	if (disp == "Register") {
+		document.getElementById("LoginPanel").style.display = "block";
+		RegistrationPanel(1);
+	}
+	if (disp == "StartScreen") {
+		document.getElementById("StartScreen").style.display = "block";
+	}
 }
+
+function onload() {
+	function getQueryVariable(variable) {
+	   var query = window.location.search.substring(1);
+	   var vars = query.split("&");
+	   for (var i=0;i<vars.length;i++) {
+	   		var pair = vars[i].split("=");
+	        if(pair[0] == variable){return pair[1];}
+			}
+			return(false);
+	}
+
+	if (!getQueryVariable("display")) {
+		var screen = "Login";
+		display(screen);
+	} else {
+		screen = getQueryVariable("display");
+		display(screen);
+	}
+}
+
+// Login Scherm
+
 function Login() {
 	// Variables
 	var user_array = "Rogier";
@@ -117,9 +148,24 @@ function Register () {
 		document.getElementById(field).style.border = "thick solid red";
 	}
 
-	function R_credentialsCheck (case) {
-		if (case == "username") {
-			
+	function R_credentialsCheck (thing, input) {
+		if (thing == "username") {
+			if (
+				input != "Hekman" ||
+				input != "Rogier"
+				) {
+				R_errorLogin("r-username", "exists");
+			}
+		}
+		if (thing == "password") {
+			if (input != passwordC_input) {
+				R_errorLogin("r-password2", "match");
+			}
+		}
+		if (thing == "tos") {
+			if (input == false) {
+				document.getElementsByTagName("label")[0].style.border = "thick solid red";
+			}
 		}
 	}
 
@@ -128,7 +174,9 @@ function Register () {
 			R_errorLogin(field, "empty")
 		}
 		else {
-			R_credentialsCheck("username", user_input);
+			R_credentialsCheck("username", username_input);
+			R_credentialsCheck("password", password_input);
+			R_credentialsCheck("tos", tos_input)
 		}
 	}
 

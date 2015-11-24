@@ -24,11 +24,11 @@ body {
 	-moz-box-shadow: 1px 1px 3px 2px #d8d8d8;
  	-webkit-box-shadow: 1px 1px 3px 2px #d8d8d8;
 	box-shadow:         1px 1px 3px 2px #d8d8d8;
-		display: none;
+
 }
 
 .middle-panel#LoginPanel {
-
+	display: none;
 }
 
 .middle-panel#LoginPanel .Login {
@@ -49,6 +49,10 @@ body {
 .middle-panel#LoginPanel p.LoginErrors {
 	display: none;
 	margin: 0 auto;
+}
+
+.middle-panel#StartScreen {
+	display: none;
 }
 
 .right-panel#RegisterPanel {
