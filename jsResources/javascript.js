@@ -157,6 +157,14 @@ function Register () {
 				R_errorLogin("r-username", "exists");
 			}
 		}
+		if (thing == "email") {
+			if (
+				input != "erik.hekman@hu.nl" ||
+				input != "rogier@sngrs.com"
+				) {
+				R_errorLogin("r-email", "exists")
+			}
+		}
 		if (thing == "password") {
 			if (input != passwordC_input) {
 				R_errorLogin("r-password2", "match");
@@ -175,6 +183,7 @@ function Register () {
 		}
 		else {
 			R_credentialsCheck("username", username_input);
+			R_credentialsCheck("email", mail_input)
 			R_credentialsCheck("password", password_input);
 			R_credentialsCheck("tos", tos_input)
 		}
