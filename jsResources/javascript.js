@@ -35,74 +35,60 @@ function onload() {
 
 function Login() {
 	// Variables
-	var user_array = "Rogier";
-	var pw_array = "1234";
-	var img_array = "imgResources/Rogier.png";
+	var user_array = 	["Rogier", 		"Hekman", 		"Koning", 		"ErikHekman", 		"ThijsWaardenburg", 	"Ronald", 		"RonaldVanEssen", 		"DitIsRogier", 		"RogierWasHier", 		"SNGRS", 		"HahaIkBenRogier"];
+	var pw_array = 		["HU", 			"adalovelace",	"HU", 			"HU", 				"HU", 					"HU", 			"HU", 					"HU", 				"HU", 					"HU", 			"HU"];
+	var img_array = 	["Rogier.png", 	"Hekman.jpg", 	"Koning.jpg",	"ErikHekman.jpeg", 	"ThijsWaardenburg.jpg", "Ronald.jpg", 	"RonaldVanEssen.jpg",	"DitIsRogier.jpg",	"RogierWasHier.jpg", 	"SNGRS.png",	"HahaIkBenRogier.jpg"];
 
 	// Prompt
 	var user_input = document.getElementById("username").value;
 	var pw_input = document.getElementById("password").value;
 
 	// Validation
-	function errorLogin (field, error) {
-		if (field == "username") {
-			document.getElementById("username").style.border = "thick solid red";
-			document.getElementById('profileImg').removeAttribute("style");
-			if (error == "empty") {
-				document.getElementById("username-empty").style.display = "block";
-				document.getElementById("username-error").style.display = "none";
+	function credentialsCheckPassword (value, id) {
+		if (pw_array.indexOf(value) != -1) {
+			if (pw_array.indexOf(value) == id) {
+				confirmCredentials("username", user_input);
+				document.getElementById("password").removeAttribute("style");
 			}
-			if (error == "error") {
-				document.getElementById("username-error").style.display = "block";
-				document.getElementById("username-empty").style.display = "none";
-			}
+		} else {
+			errorLogin("password", "error");
 		}
-		if (field == "password") {
-			document.getElementById("password").style.border = "thick solid red";
-			if (error == "empty") {
-				document.getElementById("password-empty").style.display = "block";
-				document.getElementById("password-error").style.display = "none";
-			}
-			if (error == "error") {
-				document.getElementById("password-error").style.display = "block";
-				document.getElementById("password-empty").style.display = "none";
-			}
+	}
+	function errorLogin (field, error) {
+		function foutMeldingen (error){
+			if (error == "empty") { return "Dit veld moet ingevuld worden"}
+			if (error == "error") { return "Dit veld is incorrect"}
+		}
+		var foutMelding = foutMeldingen(error);
+
+		document.getElementById(field).style.border = "thick solid red";
+		document.getElementById(field).placeholder = foutMelding;
+		$( "#"+field ).effect( "shake")
+		if (field == "username") {
+			document.getElementById('profileImg').removeAttribute("style");
 		}
 	}
 	function confirmCredentials(name, value){
 		document.getElementById("LoginPanel").style.display = "none";
 		document.getElementById("StartScreen").style.display = "block";
 	}
-	function credentialsCheck (name, value) {
-		if (name == "username") {
-			if (value == user_array) {
-				document.getElementById("username-error").style.display = "none";
-				document.getElementById("username-empty").style.display = "none";
-				document.getElementById("username").removeAttribute("style");
-				document.getElementById('profileImg').style.backgroundImage= "url(" + img_array + ")";
-				credentialsCheck("password", pw_input);
-			} else {
-				errorLogin(name, "error");
-			}
-		}
-		if (name == "password") {
-			if (value == pw_array) {
-				confirmCredentials("username", user_input);
-				document.getElementById("password").removeAttribute("style");
-				document.getElementById("password-error").style.display = "none";
-				document.getElementById("password-empty").style.display = "none";
-			} else {
-				errorLogin(name, "error");
-			}
+	function credentialsCheckUsername (value) {
+		if (user_array.indexOf(value) != -1) {
+			var id = user_array.indexOf(value);
+			var imgpath = "imgResources/avatars/";
+			document.getElementById("username").removeAttribute("style");
+			document.getElementById('profileImg').style.backgroundImage= "url(" + imgpath + img_array[id] + ")";
+			credentialsCheckPassword(pw_input, id);
+		} else {
+			errorLogin("username", "error");
 		}
 	}
 	function validateField (field, value){
-
 		if (!value.trim()) {
 			errorLogin(field, "empty")
 		}
 		else {
-			credentialsCheck("username", user_input);
+			credentialsCheckUsername(user_input);
 		}
 	}
 

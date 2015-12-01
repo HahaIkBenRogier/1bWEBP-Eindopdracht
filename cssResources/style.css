@@ -43,7 +43,7 @@ body {
 	-webkit-border-radius: 75px;
 	width: 150px;
 	height: 150px;
-	background-image: url(../imgResources/unknown.png);
+	background-image: url(../imgResources/avatars/unknown.png);
 }
 
 .middle-panel#LoginPanel p.LoginErrors {
@@ -71,7 +71,7 @@ body {
 	margin: 0 auto;
 }
 
-.right-panel#RegisterPanel p.LoginErrors {
+.right-panel#RegisterPanel p.RegisterErrors {
 	display: none;
 }
 

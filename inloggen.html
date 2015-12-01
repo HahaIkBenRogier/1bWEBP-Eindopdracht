@@ -4,6 +4,8 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="cssResources/style.css">
 		<script type="text/javascript" src="jsResources/javascript.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	</head>
 	<body onload="onload()">
 		<div class="left-panel"></div>
@@ -11,19 +13,7 @@
 			<div class="Login-form"></div>
 				<img class="Login" id="profileImg">
 				<input type="text" class="Login" id="username" placeholder="Gebruikersnaam"></input>
-				<p class="LoginErrors" id="username-empty">
-					Je moet een gebruikersnaam invullen
-				</p>
-				<p class="LoginErrors" id="username-error">
-					Gebruikersnaam niet gevonden
-				</p>
 				<input type="password" class="Login" id="password" placeholder="Wachtwoord"></input>
-				<p class="LoginErrors" id="password-error">
-					Wachtwoord incorrect
-				</p>
-				<p class="LoginErrors" id="password-empty">
-					Je moet een wachtwoord invullen
-				</p>
 				<button class="Login" id="Submit" onclick="Login()">Versturen</button>
 				<br/><br/>
 				<button class="Login" id="showRegister" onclick="RegistrationPanel(1)">Registreren</button>
