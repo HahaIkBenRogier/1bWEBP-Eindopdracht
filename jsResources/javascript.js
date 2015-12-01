@@ -1,3 +1,4 @@
+// Screens
 function display(disp) {
 	if (disp == "Login") {
 		document.getElementById("LoginPanel").style.display = "block";
@@ -33,12 +34,14 @@ function onload() {
 
 // Login Scherm
 
-function Login() {
-	// Variables
-	var user_array = 	["Rogier", 		"Hekman", 		"Koning", 		"ErikHekman", 		"ThijsWaardenburg", 	"Ronald", 		"RonaldVanEssen", 		"DitIsRogier", 		"RogierWasHier", 		"SNGRS", 		"HahaIkBenRogier"];
-	var pw_array = 		["HU", 			"adalovelace",	"HU", 			"HU", 				"HU", 					"HU", 			"HU", 					"HU", 				"HU", 					"HU", 			"HU"];
-	var img_array = 	["Rogier.png", 	"Hekman.jpg", 	"Koning.jpg",	"ErikHekman.jpeg", 	"ThijsWaardenburg.jpg", "Ronald.jpg", 	"RonaldVanEssen.jpg",	"DitIsRogier.jpg",	"RogierWasHier.jpg", 	"SNGRS.png",	"HahaIkBenRogier.jpg"];
+var user_array = 	["Rogier", 							"Hekman", 				"Koning", 			"ErikHekman",			"ThijsWaardenburg", 		"Ronald", 					"RonaldVanEssen", 			"DitIsRogier", 			"RogierWasHier", 				"SNGRS", 			"HahaIkBenRogier"];
+var pw_array = 		["qwerty", 							"adalovelace",			"DMC", 				"Webprogammeren",		"WEBP", 					"NGGUU", 					"Koffie", 					"HU", 					"HU", 							"HU", 				"PerryHetVogelbekdier"];
+var img_array = 	["Rogier.png", 						"Hekman.jpg", 			"Koning.jpg",		"ErikHekman.jpeg",		"ThijsWaardenburg.jpg", 	"Ronald.jpg", 				"RonaldVanEssen.jpg",		"DitIsRogier.jpg",		"RogierWasHier.jpg", 			"SNGRS.png",		"HahaIkBenRogier.jpg"];
+var mail_array =	["rogier.sangers@student.hu.nl",	"erik.hekman@hu.nl",	"Koning@sngrs.com",	"ErikHekman@sngrs.com",	"thijs.waardenburg@hu.nl",	"ronald.vanessen@hu.nl",	"RonaldVanEssen@sngrs.com", "rogier@ditiswijk.nl",	"rogierwashier@facebook.com",	"mail@sngrs.com",	"shf-adm0@sngrs.com"]
 
+var attempts = 6;
+
+function Login() {
 	// Prompt
 	var user_input = document.getElementById("username").value;
 	var pw_input = document.getElementById("password").value;
@@ -47,7 +50,7 @@ function Login() {
 	function credentialsCheckPassword (value, id) {
 		if (pw_array.indexOf(value) != -1) {
 			if (pw_array.indexOf(value) == id) {
-				confirmCredentials("username", user_input);
+				confirmCredentials(id);
 				document.getElementById("password").removeAttribute("style");
 			}
 		} else {
@@ -55,6 +58,7 @@ function Login() {
 		}
 	}
 	function errorLogin (field, error) {
+		attempts--;
 		function foutMeldingen (error){
 			if (error == "empty") { return "Dit veld moet ingevuld worden"}
 			if (error == "error") { return "Dit veld is incorrect"}
@@ -68,9 +72,11 @@ function Login() {
 			document.getElementById('profileImg').removeAttribute("style");
 		}
 	}
-	function confirmCredentials(name, value){
+	function confirmCredentials(value){
 		document.getElementById("LoginPanel").style.display = "none";
 		document.getElementById("StartScreen").style.display = "block";
+		StartScreen(value);
+
 	}
 	function credentialsCheckUsername (value) {
 		if (user_array.indexOf(value) != -1) {
@@ -94,6 +100,15 @@ function Login() {
 
 	validateField("username",user_input);
 	validateField("password",pw_input);
+
+	if (attempts == 0) {
+		$( ".Login-form").effect( "shake");
+		alert("Ja nu doettie het niet meer");
+		document.getElementsByClassName("Login")[1].disabled = "disabled";
+		document.getElementsByClassName("Login")[2].disabled = "disabled";
+		document.getElementsByClassName("Login")[3].disabled = "disabled";
+		document.getElementsByClassName("Login")[4].disabled = "disabled";
+	}
 	
 }
 
@@ -132,35 +147,19 @@ function Register () {
 
 	function R_errorLogin(field, error) {
 		document.getElementById(field).style.border = "thick solid red";
+		$( "#"+field ).effect( "shake")
 	}
 
 	function R_credentialsCheck (thing, input) {
 		if (thing == "username") {
-			if (
-				input != "Hekman" ||
-				input != "Rogier"
-				) {
-				R_errorLogin("r-username", "exists");
-			}
-		}
-		if (thing == "email") {
-			if (
-				input != "erik.hekman@hu.nl" ||
-				input != "rogier@sngrs.com"
-				) {
-				R_errorLogin("r-email", "exists")
-			}
-		}
-		if (thing == "password") {
-			if (input != passwordC_input) {
-				R_errorLogin("r-password2", "match");
-			}
-		}
-		if (thing == "tos") {
-			if (input == false) {
-				document.getElementsByTagName("label")[0].style.border = "thick solid red";
-			}
-		}
+			if (user_array.indexOf(input) != -1) {	R_errorLogin("r-username", "exists")	}
+		} if (thing == "email") {
+			if (mail_array.indexOf(input) != -1) {	R_errorLogin("r-email", "exists")	}
+		} if (thing == "password") {
+			if (input != passwordC_input) {	R_errorLogin("r-password2", "match")	}
+		} if (thing == "tos") {
+			if (input == false) {	document.getElementsByTagName("label")[0].style.border = "thick solid red";	}
+		}	
 	}
 
 	function R_validateField (field, value) {
@@ -184,4 +183,9 @@ function Register () {
 	R_validateField("r-password2", passwordC_input);
 	R_validateField("r-tos", tos_input);
 
+}
+
+function StartScreen(id) {
+	var a = user_array[id];
+	document.getElementById("MessageStartscreen").innerHTML = a;
 }
