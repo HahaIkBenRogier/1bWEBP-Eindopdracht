@@ -46,9 +46,8 @@ body {
 	background-image: url(../imgResources/avatars/unknown.png);
 }
 
-.middle-panel#LoginPanel p.LoginErrors {
+.middle-panel#LoginPanel #LoginBlocked {
 	display: none;
-	margin: 0 auto;
 }
 
 .middle-panel#StartScreen {
@@ -69,10 +68,6 @@ body {
 .right-panel#RegisterPanel .Registration {
 	display: block;
 	margin: 0 auto;
-}
-
-.right-panel#RegisterPanel p.RegisterErrors {
-	display: none;
 }
 
 .container {

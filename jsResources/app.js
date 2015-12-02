@@ -1,8 +1,8 @@
 // Screens
 function display(disp) {
-	if (disp == "Login") { $("#LoginPanel").css("display", "block") }
-	if (disp == "Register") { $("#LoginPanel").css("display", "block"); RegistrationPanel(1); }
-	if (disp == "StartScreen") { $("#StartScreen").css("display", "block") }
+	if (disp == "Login") { $("#LoginPanel").animate({width:'toggle'},350) }
+	if (disp == "Register") { $("#LoginPanel").animate({width:'toggle'},350); RegistrationPanel(1); }
+	if (disp == "StartScreen") { $("#StartScreen").animate({width:'toggle'},350) }
 }
 
 function onload() {
@@ -56,8 +56,8 @@ function Login() {
 	}
 
 	function confirmCredentials(value){
-		$("#LoginPanel").css("display", "none")
-		$("#StartScreen").css("display", "block")
+		$("#LoginPanel").hide("slide", { direction: "left" }, 350);
+		$("#StartScreen").show("slide", { direction: "left" }, 350);
 		StartScreen(value);
 	}
 
@@ -84,22 +84,37 @@ function Login() {
 	validateField("username",user_input);
 	validateField("password",pw_input);
 
-	if (attempts == 0) {
+	function loginBlocked () {
 		$(".Login").attr("disabled", "disabled");
+		$("#LoginBlocked").fadeIn("fast");
 		$(".Login-form").effect( "shake");
-		alert("Ja nu doettie het niet meer. Jouw schuld");
+		var sec = 30;
+		var timer = setInterval(function() { 
+   			$("#LoginBlocked span").text(sec--);
+   			if (sec == -1) {
+     	 		$("#LoginBlocked").fadeOut("fast");
+     	 		$(".Login").removeAttr("disabled");
+     	 		$(".Login").removeAttr("style");
+  	   			clearInterval(timer);
+  	   			attempts = 6;
+  		 	} 
+		}, 1000);
+
 	}
+
+	if (attempts == 0) { loginBlocked()	}
 	
 }
 
 function RegistrationPanel (argument){
 	if (argument == 1){ // Show
-		$(".right-panel").css("display", "block");
+		//$(".right-panel").css("display", "block");
+		$(".right-panel").animate({width:'toggle'},350);
 		$(".container").css("width", "calc(100% - 860px)");
 		$(".Login").attr("disabled", "disabled");
 	}
 	if (argument == 0) { // Hide
-		$(".right-panel").removeAttr("style");
+		$(".right-panel").hide("slide", { direction: "left" }, 350);
 		$(".container").removeAttr("style");
 		$(".Login").removeAttr("disabled");
 	}
@@ -123,8 +138,7 @@ function Register () {
 	var tos_input = $("#r-tos").prop("checked");
 
 	function R_errorLogin(field, error) {
-		filedInFields --;
-		alert(filedInFields);
+		filledInFields --;
 		$("#"+field).css("border", "thick solid red");
 		$("#"+field ).effect( "shake")
 	}
@@ -158,20 +172,24 @@ function Register () {
 
 	if (filledInFields == 8) {
 		user_array.push(username_input);
-		console.log(username_input);
 		pw_array.push(password_input);
-		console.log(password_input);
 		img_array.push(picture_input);
-		console.log(picture_input);
 		mail_array.push(mail_input);
-		console.log(mail_input);
-		$("#LoginPanel").css("display", "none");
+		RegistrationPanel(0);
 		$("#StartScreen").css("display", "block");
-		// DEZE DOET HET NIET // StartScreen(user_array.length + 1);
+		$("#LoginPanel").removeAttr("style");
+		StartScreen(user_array.length - 1);
 	}
 }
 
 function StartScreen(id) {
 	var a = user_array[id];
 	document.getElementById("MessageStartscreen").innerHTML = a;
+
+	for (var i = user_array.length - 1; i >= 0; i--) {
+		if (i === id) {
+			console.log(user_array[i] + " DIT IS HEM!")
+		} else {console.log(user_array[i]);}
+	}
+
 }

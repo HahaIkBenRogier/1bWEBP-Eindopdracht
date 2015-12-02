@@ -47,4 +47,26 @@ var mail_array =	[	"rogier.sangers@student.hu.nl",
 						"mail@sngrs.com",	
 						"shf-adm0@sngrs.com"	];
 
-// Register fields
+var surname_array =	[	"Rogier",
+						"Erik",
+						"Guus",
+						"Erik",
+						"Thijs",
+						"Ronald",
+						"Ronald",
+						"Rogier",
+						"Rogier",
+						"Rogier",
+						"Rogier"	]
+
+var headimg_array=	[	"",
+						"",
+						"",
+						"",
+						"",
+						"",
+						"",
+						"",
+						"",
+						"",
+						""	]
