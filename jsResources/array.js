@@ -17,9 +17,9 @@ var pw_array = 		[	"qwerty",
 						"Webprogammeren",		
 						"WEBP", 					
 						"NGGUU", 					
-						"Koffie", 					
+						"HU", 					
 						"1234", 				
-						"HU", 							
+						"Koffie", 							
 						"HU", 				
 						"PerryHetVogelbekdier"	];
 
@@ -45,6 +45,6 @@ var mail_array =	[	"rogier.sangers@student.hu.nl",
 						"rogier@ditiswijk.nl",	
 						"rogierwashier@facebook.com",	
 						"mail@sngrs.com",	
-						"shf-adm0@sngrs.com"]
+						"shf-adm0@sngrs.com"	];
 
 // Register fields

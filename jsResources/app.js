@@ -35,7 +35,6 @@ function Login() {
 		if (pw_array.indexOf(value) != -1) {
 			if (pw_array.indexOf(value) == id) {
 				confirmCredentials(id);
-				$("#password").removeAttr("style");
 			}
 		} else {
 			errorLogin("password", "error");
@@ -67,15 +66,19 @@ function Login() {
 			var id = user_array.indexOf(value);
 			var imgfolder = "imgResources/avatars/";
 			var imgpath = imgfolder + img_array[id];
-			$("#username").removeAttr("style");
 			$("#profileImg").css("background-image", "url(" + imgpath + ")");
 			credentialsCheckPassword(pw_input, id);
 		} else {	errorLogin("username", "error");	}
 	}
 
 	function validateField (field, value){
+		$("#"+field).removeAttr("style");
 		if (!value.trim()) {	errorLogin(field, "empty")	}
-		else {	credentialsCheckUsername(user_input);	}
+		else {	
+			if (field == "username") {
+				credentialsCheckUsername(user_input);
+			}		
+		}
 	}
 
 	validateField("username",user_input);
@@ -104,7 +107,11 @@ function RegistrationPanel (argument){
 
 // Register
 
+filledInFields = 8;
+
 function Register () {
+	
+
 	// INPUT
 	var picture_input = $("#r-profilepic").val();
 	var surname_input = $("#r-surname").val();
@@ -116,43 +123,52 @@ function Register () {
 	var tos_input = $("#r-tos").prop("checked");
 
 	function R_errorLogin(field, error) {
+		filedInFields --;
+		alert(filedInFields);
 		$("#"+field).css("border", "thick solid red");
 		$("#"+field ).effect( "shake")
 	}
 
 	function R_credentialsCheck (thing, input) {
-		if (thing == "username") {
+		if (thing == "r-username") {
 			if (user_array.indexOf(input) != -1) {	R_errorLogin("r-username", "exists")	}
-		} if (thing == "email") {
+		} if (thing == "r-email") {
 			if (mail_array.indexOf(input) != -1) {	R_errorLogin("r-email", "exists")	}
-		} if (thing == "password") {
+		} if (thing == "r-password") {
 			if (input != passwordC_input) {	R_errorLogin("r-password2", "match")	}
-		} if (thing == "tos") {
-			if (input == false) {	document.getElementsByTagName("label")[0].style.border = "thick solid red";	}
-		}	
+		} if (thing == "r-tos") {
+			if (input == false) {	$("label").css("border", "thick solid red");	}
+		}
 	}
 
 	function R_validateField (field, value) {
-		if (!value.trim()) {
-			R_errorLogin(field, "empty")
-		}
-		else {
-			R_credentialsCheck("username", username_input);
-			R_credentialsCheck("email", mail_input)
-			R_credentialsCheck("password", password_input);
-			R_credentialsCheck("tos", tos_input)
-		}
+		$("#"+field).removeAttr("style");
+		if (!value) { R_errorLogin(field, "empty")	}
+		else {	R_credentialsCheck(field, value);	}
 	}
 
-	R_validateField("r-profilepic", picture_input);
-	R_validateField("r-surname", surname_input);
-	R_validateField("r-lastname", lastname_input);
-	R_validateField("r-username", username_input);
-	R_validateField("r-email", mail_input);
-	R_validateField("r-password", password_input);
-	R_validateField("r-password2", passwordC_input);
-	R_validateField("r-tos", tos_input);
+	var rValidateFieldFields =	[	"r-profilepic",	"r-surname",	"r-lastname",	"r-username",	"r-email",	"r-password",	"r-password2",	"r-tos"		];
+	var rValidateFieldInput =	[	picture_input,	surname_input,	lastname_input,	username_input,	mail_input,	password_input,	passwordC_input,	tos_input	];
 
+	for (var i = rValidateFieldFields.length - 1; i >= 0; i--) {
+		var field = rValidateFieldFields[i];
+		var input = rValidateFieldInput[i];
+		R_validateField(field, input);
+	}
+
+	if (filledInFields == 8) {
+		user_array.push(username_input);
+		console.log(username_input);
+		pw_array.push(password_input);
+		console.log(password_input);
+		img_array.push(picture_input);
+		console.log(picture_input);
+		mail_array.push(mail_input);
+		console.log(mail_input);
+		$("#LoginPanel").css("display", "none");
+		$("#StartScreen").css("display", "block");
+		// DEZE DOET HET NIET // StartScreen(user_array.length + 1);
+	}
 }
 
 function StartScreen(id) {
