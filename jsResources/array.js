@@ -1,3 +1,20 @@
+var backgroundIMGs =	[	"Appelpop-Blof.jpg",
+							"Appelpop-Blof2.jpg",
+							"Appelpop-Kensington.jpg",
+							"Appelpop-Kensington2.jpg",
+							"Appelpop-Kensington3.jpg",
+							"Appelpop-Kensington4.jpg",
+							"Appelpop-KraantjePappie.jpg",
+							"Appelpop.jpg",
+							"Tivoli-CaroEmerald.jpg",
+							"Tivoli-CaroEmerald2.jpg",
+							"ZiggoDome-JasonMraz.jpg",
+							"ZiggoDome-JasonMraz2.jpg",
+							"ZiggoDome-Kensington.jpg",
+							"ZiggoDome-Kensington2.jpg",
+							"ZiggoDome-Kensington3.jpg",
+							"ZiggoDome-Kensington4.jpg"	]
+
 // User Profiles
 var user_array = 	[	"Rogier", 							
 						"Hekman", 				

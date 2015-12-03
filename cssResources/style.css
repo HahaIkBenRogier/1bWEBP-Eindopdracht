@@ -1,6 +1,8 @@
 body {
 	margin: 0;
-}
+	background-image: url('../imgResources/backgroundSlider/ZiggoDome-Kensington.jpg');
+	background-position: center; 
+}	
 
 * {
 	box-sizing:border-box;
@@ -9,21 +11,15 @@ body {
 .left-panel {
 	height: 100vh;
 	width: 60px;
-	background-color: #e5e5e5;
+	background-color: rgba(229, 229, 229, 0.95);
 	float: left;
-	-moz-box-shadow: 1px 1px 3px 2px #e5e5e5;
- 	-webkit-box-shadow: 1px 1px 3px 2px #e5e5e5;
-	box-shadow: 1px 1px 3px 2px #e5e5e5;
 }
 
 .middle-panel {
 	height: 100vh;
 	width: 400px;
-	background-color: #d8d8d8;
+	background-color: rgba(216, 216, 216, 0.9);
 	float: left;
-	-moz-box-shadow: 1px 1px 3px 2px #d8d8d8;
- 	-webkit-box-shadow: 1px 1px 3px 2px #d8d8d8;
-	box-shadow:         1px 1px 3px 2px #d8d8d8;
 
 }
 
@@ -50,6 +46,10 @@ body {
 	display: none;
 }
 
+.middle-panel#LoginPanel #LoginBlocked span {
+	font-weight: bold;
+}
+
 .middle-panel#StartScreen {
 	display: none;
 }
@@ -57,12 +57,13 @@ body {
 .right-panel#RegisterPanel {
 	height: 100vh;
 	width: 400px;
-	background-color: white;
+	background-color: rgba(242, 242, 242, 0.9);
 	float: left;
 	display: none;
-	-moz-box-shadow: 1px 1px 3px 2px #fff;
- 	-webkit-box-shadow: 1px 1px 3px 2px #fff;
-	box-shadow:         1px 1px 3px 2px #fff;
+}
+
+.right-panel#RegisterPanel .RegError {
+
 }
 
 .right-panel#RegisterPanel .Registration {
@@ -73,9 +74,6 @@ body {
 .container {
 	width: calc(100% - 460px);
 	height: 100vh;
-	background-color: #f2f2f2;
+	background-color: rgba(0, 0, 0, 0);
 	float: left;
-	-moz-box-shadow: 1px 1px 3px 2px #f2f2f2;
- 	-webkit-box-shadow: 1px 1px 3px 2px #f2f2f2;
-	box-shadow:         1px 1px 3px 2px #f2f2f2;
 }
