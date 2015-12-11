@@ -76,6 +76,18 @@ var surname_array =	[	"Rogier",
 						"Rogier",
 						"Rogier"	]
 
+var lastname_array =	[	"Sangers",
+						"Hekman",
+						"Koning",
+						"Hekman",
+						"Waardenburg",
+						"van Essen",
+						"van Essen",
+						"Sangers",
+						"Sangers",
+						"Sangers",
+						"Sangers"	]	
+
 var headimg_array=	[	"",
 						"",
 						"",

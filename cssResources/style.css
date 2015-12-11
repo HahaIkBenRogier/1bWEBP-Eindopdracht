@@ -20,6 +20,7 @@ body {
 	width: 400px;
 	background-color: rgba(216, 216, 216, 0.9);
 	float: left;
+	overflow: auto;
 
 }
 
@@ -54,12 +55,21 @@ body {
 	display: none;
 }
 
+.middle-panel#StartScreen img#profileImg.Profile {
+	border-radius: 50px; 
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	width: 100px;
+	height: 100px;
+}
+
 .right-panel#RegisterPanel {
 	height: 100vh;
 	width: 400px;
 	background-color: rgba(242, 242, 242, 0.9);
 	float: left;
 	display: none;
+	overflow: auto;
 }
 
 .right-panel#RegisterPanel .RegError {

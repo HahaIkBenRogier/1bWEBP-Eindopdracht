@@ -10,13 +10,13 @@
 		
 		
 	</head>
-	<body onload="onload()">
+	<body>
 		<div class="left-panel"></div>
 		<div class="middle-panel" id="LoginPanel">
 			<div class="Login-form">
 				<img class="Login" id="profileImg">
 				<input type="text" class="Login" id="username" placeholder="Gebruikersnaam"></input>
-				<input type="password" class="Login" id="password" placeholder="Wachtwoord" onkeypress="capLock(event)"></input>
+				<input type="password" class="Login" id="password" placeholder="Wachtwoord"></input>
 
 				<p class="LoginError" id="caps" style="display: none;">Je CapsLock staat aan</p>
 				<div id="LoginBlocked">
@@ -25,16 +25,19 @@
 					<p>Over <span>30</span> seconden kan je weer inloggen.</p>
 				</div>
 
-				<button class="Login" id="Submit" onclick="Login()">Versturen</button>
+				<button class="Login" id="Submit">Versturen</button>
 				<br/><br/>
-				<button class="Login" id="showRegister" onclick="RegistrationPanel(1)">Registreren</button>
+				<button class="Login" id="showRegister">Registreren</button>
 			</div>
 		</div>
 		<div class="middle-panel" id="StartScreen">
-			<p id="MessageStartscreen"></p>
+			<img class="Profile" id="profileImg">
+			<p class="Profile" id="username">@</p>
+			<p class="Profile" id="surname"></p>
+			<p class="Profile" id="lastname"></p>
 		</div>
 		<div class="right-panel" id="RegisterPanel">
-			<button class="Registration" id="hideRegister" onclick="RegistrationPanel(0)">Toch maar inloggen</button>
+			<button class="Registration" id="hideRegister">Toch maar inloggen</button>
 			<br/>
 			<div class="Register-form">
 				<input type="file" class="Registration" id="r-profilepic" name="profilepic" accept="image/*">
