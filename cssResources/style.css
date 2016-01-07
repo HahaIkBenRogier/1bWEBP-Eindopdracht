@@ -55,15 +55,183 @@ body {
 	display: none;
 }
 
+.middle-panel#StartScreen div.Profile {
+	background-color: white;
+	float: left;	
+}
+
+.middle-panel#StartScreen div.Profile .headerIMG {
+	margin-bottom: 5px;
+	height: 100px;
+	float: left;
+}
+
 .middle-panel#StartScreen img#profileImg.Profile {
 	border-radius: 50px; 
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
 	width: 100px;
 	height: 100px;
+	float: left;
 }
 
-.right-panel#RegisterPanel {
+.middle-panel#StartScreen p.Profile {
+	width: 285px;
+	float: left;
+	margin: 0;
+}
+
+.middle-panel#StartScreen .Profile .Statsbar div {
+	width: 100px;
+	float: left;
+	height: 50px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.middle-panel#StartScreen .Profile .Statsbar div span {
+	font-weight: bold;
+	display: block;
+}
+
+.middle-panel#StartScreen .newPost {
+	background-color: white;
+}
+
+.middle-panel#StartScreen .newPost textarea {
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	width: 380px; 
+	height: 50px;
+}
+
+.middle-panel#StartScreen .newPost button#postStatus {
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	width: 380px; 
+	height: 25px;
+}
+
+.middle-panel#StartScreen .posts .post {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.middle-panel#StartScreen .posts .post .postAuthorIMG {
+	float: left;
+	height: 50px;
+	width: 50px;
+}
+
+.middle-panel#StartScreen .posts .post .postAuthor {
+	float: left;
+	font-weight: bold;
+	width: 250px;
+	padding-left: 10px;
+}
+
+.middle-panel#StartScreen .posts .post .postDate {
+	float: left;
+	width: 90px;
+	text-align: right;
+	margin-right: 10px;
+}
+
+.middle-panel#StartScreen .posts .post .postMessage {
+	width: 350px;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.middle-panel#StartScreen .posts .post .postLikes {
+	width: 50px;
+	height: 50px;
+	float: left;
+	text-align: center;
+}
+
+.middle-panel#StartScreen .posts .post .postLikes div.likeButton {
+	width: 50px;
+	height: 25px;
+	background-color: blue;
+	float: left;
+}
+
+.middle-panel#StartScreen .posts .post .postLikes .amountLikes {
+	width: 50px;
+	height: 25px;
+	float: left;
+}
+
+.middle-panel#StartScreen .posts .post .postDelete {
+	float: right;
+	width: 350px;
+	text-align: right;
+	padding-right: 15px;
+}
+
+.middle-panel#StartScreen .posts .post .postComments {
+	float: right;
+	width: 340px;
+	background-color: grey;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.middle-panel#StartScreen .posts .post .postComments .postCommentInput input {
+	margin: 5px 5px 5px 10px;
+    width: 250px;
+}
+
+.middle-panel#StartScreen .posts .post .postComments .postComment {
+	margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.middle-panel#StartScreen .posts .post .postComments .postComment .commentAuthorIMG {
+	float: left;
+	height: 35px;
+	width: 35px;
+}
+
+.middle-panel#StartScreen .posts .post .postComments .postComment .commentAuthor {
+	float: left;
+	font-weight: bold;
+	width: 300px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.middle-panel#StartScreen .posts .post .postComments .postComment .commentMessage {
+	float: left;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 305px;
+}
+
+.middle-panel#StartScreen .posts .post .postComments .postComment .commentDate {
+	float: left;
+	margin-left: 40px;
+    width: 150px;
+}
+
+.middle-panel#StartScreen .posts .post .postComments .postComment .commentDelete {
+	text-align: right;
+	padding-right: 10px;
+	float: left;
+	width: 150px;
+}
+
+.right-panel {
 	height: 100vh;
 	width: 400px;
 	background-color: rgba(242, 242, 242, 0.9);
@@ -72,14 +240,11 @@ body {
 	overflow: auto;
 }
 
-.right-panel#RegisterPanel .RegError {
-
-}
-
 .right-panel#RegisterPanel .Registration {
 	display: block;
 	margin: 0 auto;
 }
+
 
 .container {
 	width: calc(100% - 460px);

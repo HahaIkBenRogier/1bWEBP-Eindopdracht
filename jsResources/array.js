@@ -1,4 +1,4 @@
-var backgroundIMGs =	[	"Appelpop-Blof.jpg",
+var headimg_array =	[	"Appelpop-Blof.jpg",
 							"Appelpop-Blof2.jpg",
 							"Appelpop-Kensington.jpg",
 							"Appelpop-Kensington2.jpg",
@@ -26,19 +26,21 @@ var user_array = 	[	"Rogier",
 						"DitIsRogier", 			
 						"RogierWasHier", 				
 						"SNGRS", 			
-						"HahaIkBenRogier"	];
+						"HahaIkBenRogier",
+						"Q"	];
 
 var pw_array = 		[	"qwerty", 							
 						"adalovelace",			
 						"DMC", 				
-						"Webprogammeren",		
+						"W ebprogammeren",		
 						"WEBP", 					
 						"NGGUU", 					
 						"HU", 					
 						"1234", 				
 						"Koffie", 							
 						"HU", 				
-						"PerryHetVogelbekdier"	];
+						"PerryHetVogelbekdier",
+						"W"	];
 
 var img_array = 	[	"Rogier.png", 						
 						"Hekman.jpg", 			
@@ -50,6 +52,7 @@ var img_array = 	[	"Rogier.png",
 						"DitIsRogier.jpg",		
 						"RogierWasHier.jpg", 			
 						"SNGRS.png",		
+						"HahaIkBenRogier.jpg",
 						"HahaIkBenRogier.jpg"	];
 
 var mail_array =	[	"rogier.sangers@student.hu.nl",	
@@ -62,7 +65,8 @@ var mail_array =	[	"rogier.sangers@student.hu.nl",
 						"rogier@ditiswijk.nl",	
 						"rogierwashier@facebook.com",	
 						"mail@sngrs.com",	
-						"shf-adm0@sngrs.com"	];
+						"shf-adm0@sngrs.com",
+						""	];
 
 var surname_array =	[	"Rogier",
 						"Erik",
@@ -74,9 +78,10 @@ var surname_array =	[	"Rogier",
 						"Rogier",
 						"Rogier",
 						"Rogier",
+						"Rogier",
 						"Rogier"	]
 
-var lastname_array =	[	"Sangers",
+var lastname_array =	["Sangers",
 						"Hekman",
 						"Koning",
 						"Hekman",
@@ -86,16 +91,7 @@ var lastname_array =	[	"Sangers",
 						"Sangers",
 						"Sangers",
 						"Sangers",
-						"Sangers"	]	
+						"Sangers",
+						"Grassen"	]
 
-var headimg_array=	[	"",
-						"",
-						"",
-						"",
-						"",
-						"",
-						"",
-						"",
-						"",
-						"",
-						""	]
+

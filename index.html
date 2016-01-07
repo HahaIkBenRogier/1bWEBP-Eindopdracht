@@ -31,10 +31,89 @@
 			</div>
 		</div>
 		<div class="middle-panel" id="StartScreen">
-			<img class="Profile" id="profileImg">
-			<p class="Profile" id="username">@</p>
-			<p class="Profile" id="surname"></p>
-			<p class="Profile" id="lastname"></p>
+			<div class="Profile">
+				<div class="headerIMG">
+					<img class="Profile" id="profileImg">
+					<p class="Profile" id="username">Gebruikersnaam: <span></span></p>
+					<p class="Profile" id="name">Volledige naam: <span></span></p>
+					<p class="Profile" id="lastconcert">Laaste concert: <span>Kensington, Ziggo Dome (26 november 2015)</span></p>
+					<button class="Profile" id="ProfileEdit">Profiel bewerken</button>
+				</div>
+				<div class="Statsbar">
+					<div id="messages"><span>100</span> berichten</div>
+					<div id="concerts"><span>21</span> bezochte concerten</div>
+					<div id="following"><span>8</span> volgend</div>
+					<div id="followers"><span>11</span> volgers</div>
+				</div>
+			</div>
+			<div class="newPost">
+				<TEXTAREA Name="status" id="writeStatus" placeholder="vul hier je troep in"></TEXTAREA>
+				<button class="newPost" id="postStatus">Wij eten chips</button>
+			</div>	
+			<div class="posts">
+				<div class="post" id="post_1">
+					<div class="postAuthorIMG" style="background-image: url(imgResources/avatars/Rogier.png);"></div>
+					<div class="postAuthor">Rogier Sangers</div>
+					<div class="postDate">7jan16 09:40</div>
+					<div class="postMessage">Hoi dit is een test</div>
+					<div class="postLikes">
+						<div class="likeButton">Duim!</div>
+						<div class="amountLikes">7</div>
+					</div>
+					<div class="postDelete">Verwijder bericht</div>
+					<div class="postComments">
+						<div class="postCommentInput">
+							<input type="text" class="postCommentInput"></input>
+							<button class="postCommentAdd">Reageren</button>
+						</div>
+						<div class="postComment">
+							<div class="commentAuthorIMG" style="background-image: url(imgResources/avatars/DitIsRogier.jpg);"></div>
+							<div class="commentAuthor">Roger Grassen</div>
+							<div class="commentMessage">Haha nee dit klopt niet</div>
+							<div class="commentDate">6jan17</div>
+							<div class="commentDelete">Verwijder reactie</div>
+						</div>
+						<div class="postComment">
+							<div class="commentAuthorIMG" style="background-image: url(imgResources/avatars/DitIsRogier.jpg);"></div>
+							<div class="commentAuthor">Roger Grassen</div>
+							<div class="commentMessage">Haha nee dit klopt niet</div>
+							<div class="commentDate">6jan17</div>
+							<div class="commentDelete">Verwijder reactie</div>
+						</div>
+					</div>
+				</div>
+				<div class="post" id="post_0">
+					<div class="postAuthorIMG" style="background-image: url(imgResources/avatars/Rogier.png);"></div>
+					<div class="postAuthor">Rogier Sangers</div>
+					<div class="postDate">7jan16 09:40</div>
+					<div class="postMessage">Hoi dit is een test</div>
+					<div class="postLikes">
+						<div class="likeButton">Duim!</div>
+						<div class="amountLikes">7</div>
+					</div>
+					<div class="postDelete">Verwijder bericht</div>
+					<div class="postComments">
+						<div class="postCommentInput">
+							<input type="text" class="postCommentInput"></input>
+							<button class="postCommentAdd">Reageren</button>
+						</div>
+						<div class="postComment">
+							<div class="commentAuthorIMG" style="background-image: url(imgResources/avatars/DitIsRogier.jpg);"></div>
+							<div class="commentAuthor">Roger Grassen</div>
+							<div class="commentMessage">Haha nee dit klopt niet</div>
+							<div class="commentDate">6jan17</div>
+							<div class="commentDelete">Verwijder reactie</div>
+						</div>
+						<div class="postComment">
+							<div class="commentAuthorIMG" style="background-image: url(imgResources/avatars/DitIsRogier.jpg);"></div>
+							<div class="commentAuthor">Roger Grassen</div>
+							<div class="commentMessage">Haha nee dit klopt niet</div>
+							<div class="commentDate">6jan17</div>
+							<div class="commentDelete">Verwijder reactie</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="right-panel" id="RegisterPanel">
 			<button class="Registration" id="hideRegister">Toch maar inloggen</button>
@@ -51,8 +130,11 @@
 				<input type="password" class="Registration" id="r-password2" placeholder="Bevestig wachtwoord"></input>
 
 				<label><input type="checkbox" name="tos" value="agree" class="Register" id="r-tos">Ik accepteer deze shit</label>
-				<button class="Register" id="submit" onclick="Register()">Registreren</button>
+				<button class="Register" id="submit">Registreren</button>
 			</div>
+		</div>
+		<div class="right-panel" id="ProfilePanel">
+			Hoi
 		</div>
 		<div class="container"></div>
 	</body>

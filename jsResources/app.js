@@ -2,7 +2,10 @@
 function display(disp) {
 	if (disp == "Login") { $("#LoginPanel").animate({width:'toggle'},350) }
 	if (disp == "Register") { $("#LoginPanel").animate({width:'toggle'},350); RegistrationPanel(1); }
-	if (disp == "StartScreen") { $("#StartScreen").animate({width:'toggle'},350) }
+	if (disp == "Start") { 
+		$("#StartScreen").animate({width:'toggle'},350);
+		StartScreen(1);
+	}
 }
 
 $(document).ready(function(){
@@ -36,16 +39,25 @@ $(document).ready(function(){
 	})
 
 	function credentialsCheckPassword (value, id) {
+		//alert("credentialsCheckPassword " + value + " " + id)
 		if (pw_array.indexOf(value) != -1) {
+			//alert("check in array")
 			if (pw_array.indexOf(value) == id) {
+				//alert("zooi klopt")
 				confirmCredentials(id);
 			}
+			else {
+				//alert("zooi klopt niet")
+				errorLogin("password", "error");
+			}
 		} else {
+			//alert("zooi klopt niet")
 			errorLogin("password", "error");
 		}
 	}
 
 	function errorLogin (field, error) {
+		//alert("errorLogin " + field + " " + error)
 		attempts--;
 		function foutMeldingen (error){
 			if (error == "empty") { return "Dit veld moet ingevuld worden"}
@@ -65,7 +77,8 @@ $(document).ready(function(){
 		StartScreen(value);
 	}
 
-	function credentialsCheckUsername (focus, value) {
+	function credentialsCheckUsername (value) {
+		//alert("credentialsCheckUsername " + value)
 		if (user_array.indexOf(value) != -1) {
 			var pw_input = $("#password").val();
 			var id = user_array.indexOf(value);
@@ -78,25 +91,28 @@ $(document).ready(function(){
 		} else {	errorLogin("username", "error");	}
 	}
 
-	function validateField (focus, field, value){
+	function validateField (field, value){
+		//alert("validateField " + field + " " + value)
 		var user_input = $("#username").val();
 		$("#"+field).removeAttr("style");
-		if (!value.trim()) {	errorLogin(field, "empty")	}
+		if (!value.trim()) {	
+			errorLogin(field, "empty")	
+		}
 		else {	
 			if (field == "username") {
 				$(".LoginError").css("display", "none")
-				credentialsCheckUsername(focus, user_input);
+				credentialsCheckUsername(user_input);
 			}
 		}
 	}
 
 	$("button.Login#Submit").click(function() {
-
+		//alert("submit klik")
 		var user_input = $("#username").val();
 		var pw_input = $("#password").val();
 
-		validateField("n","username",user_input);
-		validateField("n","password",pw_input);
+		validateField("username",user_input);
+		validateField("password",pw_input);
 
 		if (attempts == 0) { loginBlocked()	}
 
@@ -131,7 +147,7 @@ $(document).ready(function(){
 
 	$("button.Login#showRegister").click(function() {
 
-		$(".right-panel").animate({width:'toggle'},350);
+		$("#RegisterPanel").animate({width:'toggle'},350);
 		$(".container").css("width", "calc(100% - 860px)");
 		$("#LoginPanel").css("opacity", "0.7");
 		$(".Login").attr("disabled", "disabled");
@@ -187,8 +203,7 @@ $(document).ready(function(){
 		else {	R_credentialsCheck(field, value);	}
 	}
 
-	function Register () {
-		
+	$("button.Register#submit").click(function() {
 		var picture_input = $("#r-profilepic").val();
 		var surname_input = $("#r-surname").val();
 		var lastname_input = $("#r-lastname").val();
@@ -217,24 +232,57 @@ $(document).ready(function(){
 			$("#LoginPanel").removeAttr("style");
 			StartScreen(user_array.length - 1);
 		}
-	}
+	})
 
 	function StartScreen(id) {
+		function randomHeader () {
+			var randomNumber = Math.floor(Math.random()*headimg_array.length);
+			return headimg_array[randomNumber];
+		}	
+
+		var headerfolder = "imgResources/header_thumb/" ;
+		var headerpath = headerfolder + randomHeader();
+
+		$(".Profile div.headerIMG").css("background-image", "url(" + headerpath + ")");  
+
 		var imgfolder = "imgResources/avatars/";
 		var imgpath = imgfolder + img_array[id];
 		$("img.Profile#profileImg").attr("src", imgpath);
-		$("p.Profile#username").text("@"+user_array[id]);
-		$("p.Profile#surname").text(surname_array[id]);
-		$("p.Profile#lastname").text(lastname_array[id]);
+		$("p.Profile#username span").text("@"+user_array[id]);
+		$("p.Profile#name span").text(surname_array[id] + " " + lastname_array[id]);
 
+		$("img.Profile#profileImg").click(function() {
+			$("#ProfilePanel").animate({width:'toggle'},350);
+			$(".container").css("width", "calc(100% - 860px)");
+		});
 
-		for (var i = user_array.length - 1; i >= 0; i--) {
-			if (i === id) {
-				console.log(user_array[i] + " DIT IS HEM!")
-			} else {console.log(user_array[i]);}
-		}
+		$("body").on("click", ".likeButton", function(){
+			alert("hoi")
+			var likes = $(this).siblings(".middle-panel#StartScreen .posts .post .postLikes .amountLikes").text();
+			likes++;
+			$(this).siblings(".middle-panel#StartScreen .posts .post .postLikes .amountLikes").text(likes);
+		});
+
+		$("body").on("click", ".commentDelete", function(){
+			alert("w00t")
+			$(this).closest('.postComment').remove();
+		});
+
+		$("body").on("click", ".postDelete", function(){
+			$(this).closest('.post').remove();
+		});
+
+		var volledigeNaam = surname_array[id] + " " + lastname_array[id];
+
+		$("body").on("click", ".postCommentAdd", function(){
+			var input = $(this).siblings("input.postCommentInput").val();
+			console.log(input);
+			var comment = "<div class='postComment'><div class='commentAuthorIMG' style='background-image: url(imgResources/avatars/"+ img_array[id] +");'></div><div class='commentAuthor'>" + volledigeNaam + "</div><div class='commentMessage'>"+ input +"</div><div class='commentDate'>nu</div><div class='commentDelete'>Verwijder reactie</div></div>";
+			console.log(comment);
+			$(this).parent().siblings(".postComments").append(comment);
+			alert("w00t 4");
+		});			
 
 	}
-
 
 })
