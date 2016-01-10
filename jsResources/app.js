@@ -256,15 +256,25 @@ $(document).ready(function(){
 			$(".container").css("width", "calc(100% - 860px)");
 		});
 
+		var volledigeNaam = surname_array[id] + " " + lastname_array[id];
+
+		$("button.newPost#postStatus").on("click", function(){
+			var status = $("#writeStatus").val();
+			
+			var toevoegen = "<div class='post'><div class='postAuthorIMG' style='background-image: url(imgResources/postAvatars/" + img_array[id] + ");'></div><div class='postAuthor'>"+ volledigeNaam +"</div><div class='postDate'>nu</div><div class='postMessage'>"+status+"</div><div class='postLikes'>	<div class='likeButton'>Duim!</div>	<div class='amountLikes'>0</div></div><div class='postDelete'>Verwijder bericht</div><div class='postCommentInput'><input type='text' class='postCommentInput'></input><button class='postCommentAdd'>Reageren</button></div><div class='postComments'></div></div>";
+			$(".posts").prepend(toevoegen);
+			var amountPosts = $(".middle-panel#StartScreen .Profile .Statsbar #messages span").text();
+			amountPosts++;
+			$(".middle-panel#StartScreen .Profile .Statsbar #messages span").text(amountPosts);
+		});
+
 		$("body").on("click", ".likeButton", function(){
-			alert("hoi")
 			var likes = $(this).siblings(".middle-panel#StartScreen .posts .post .postLikes .amountLikes").text();
 			likes++;
 			$(this).siblings(".middle-panel#StartScreen .posts .post .postLikes .amountLikes").text(likes);
 		});
 
 		$("body").on("click", ".commentDelete", function(){
-			alert("w00t")
 			$(this).closest('.postComment').remove();
 		});
 
@@ -272,15 +282,10 @@ $(document).ready(function(){
 			$(this).closest('.post').remove();
 		});
 
-		var volledigeNaam = surname_array[id] + " " + lastname_array[id];
-
 		$("body").on("click", ".postCommentAdd", function(){
 			var input = $(this).siblings("input.postCommentInput").val();
-			console.log(input);
-			var comment = "<div class='postComment'><div class='commentAuthorIMG' style='background-image: url(imgResources/avatars/"+ img_array[id] +");'></div><div class='commentAuthor'>" + volledigeNaam + "</div><div class='commentMessage'>"+ input +"</div><div class='commentDate'>nu</div><div class='commentDelete'>Verwijder reactie</div></div>";
-			console.log(comment);
-			$(this).parent().siblings(".postComments").append(comment);
-			alert("w00t 4");
+			var comment = "<div class='postComment'><div class='commentAuthorIMG' style='background-image: url(imgResources/commentAvatars/"+ img_array[id] +");'></div><div class='commentAuthor'>" + volledigeNaam + "</div><div class='commentMessage'>"+ input +"</div><div class='commentDate'>nu</div><div class='commentDelete'>Verwijder reactie</div></div>";
+			$(this).parent().siblings(".postComments").prepend(comment);
 		});			
 
 	}

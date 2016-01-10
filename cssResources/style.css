@@ -119,6 +119,7 @@ body {
 .middle-panel#StartScreen .posts .post {
 	margin-top: 5px;
 	margin-bottom: 5px;
+	float: left;
 }
 
 .middle-panel#StartScreen .posts .post .postAuthorIMG {
@@ -177,6 +178,11 @@ body {
 	padding-right: 15px;
 }
 
+.middle-panel#StartScreen .posts .post .postCommentInput input {
+	margin: 5px 5px 5px 10px;
+    width: 250px;
+}
+
 .middle-panel#StartScreen .posts .post .postComments {
 	float: right;
 	width: 340px;
@@ -185,14 +191,10 @@ body {
 	margin-right: 5px;
 }
 
-.middle-panel#StartScreen .posts .post .postComments .postCommentInput input {
-	margin: 5px 5px 5px 10px;
-    width: 250px;
-}
-
 .middle-panel#StartScreen .posts .post .postComments .postComment {
 	margin-bottom: 15px;
     margin-top: 10px;
+    float: left;
 }
 
 .middle-panel#StartScreen .posts .post .postComments .postComment .commentAuthorIMG {

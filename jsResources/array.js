@@ -42,7 +42,7 @@ var pw_array = 		[	"qwerty",
 						"PerryHetVogelbekdier",
 						"W"	];
 
-var img_array = 	[	"Rogier.png", 						
+var img_array = 	[	"Rogier.jpg", 						
 						"Hekman.jpg", 			
 						"Koning.jpg",		
 						"ErikHekman.jpeg",		
@@ -51,7 +51,7 @@ var img_array = 	[	"Rogier.png",
 						"RonaldVanEssen.jpg",		
 						"DitIsRogier.jpg",		
 						"RogierWasHier.jpg", 			
-						"SNGRS.png",		
+						"SNGRS.jpg",		
 						"HahaIkBenRogier.jpg",
 						"HahaIkBenRogier.jpg"	];
 
