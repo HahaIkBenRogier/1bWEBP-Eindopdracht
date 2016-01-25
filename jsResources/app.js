@@ -136,15 +136,6 @@ $(document).ready(function(){
 			}, 1000);
 		}
 
-	/* 
-		---	LIVE VALIDATIE DIE HET NIET DOET 	---
-		$("#username").focusout(function() {
-			 	alert("FUncite doe ther!")
-			 	var user_input = $("#username").val();
-		        validateField("y", "username", user_input)
-		    }); 
-	*/
-
 	$("button.Login#showRegister").click(function() {
 
 		$("#RegisterPanel").animate({width:'toggle'},350);
@@ -198,7 +189,7 @@ $(document).ready(function(){
 
 	function R_validateField (field, value) {
 		$("#"+field).removeAttr("style");
-
+		console.log(field + " -- " + value)
 		if (!value) { R_errorLogin(field, "empty")	}
 		else {	R_credentialsCheck(field, value);	}
 	}
@@ -227,14 +218,15 @@ $(document).ready(function(){
 			pw_array.push(password_input);
 			img_array.push(picture_input);
 			mail_array.push(mail_input);
-			RegistrationPanel(0);
 			$("#StartScreen").css("display", "block");
 			$("#LoginPanel").removeAttr("style");
 			StartScreen(user_array.length - 1);
+			$(".right-panel").hide("slide", { direction: "left" }, 350);
 		}
 	})
 
 	function StartScreen(id) {
+		$(".menuItems").show()
 		function randomHeader () {
 			var randomNumber = Math.floor(Math.random()*headimg_array.length);
 			return headimg_array[randomNumber];
@@ -252,20 +244,28 @@ $(document).ready(function(){
 		$("p.Profile#name span").text(surname_array[id] + " " + lastname_array[id]);
 
 		$("img.Profile#profileImg").click(function() {
+			$(".right-panel").hide("slide", { direction: "left" }, 350);
 			$("#ProfilePanel").animate({width:'toggle'},350);
 			$(".container").css("width", "calc(100% - 860px)");
 		});
+
+		$("button.Profile#ProfileEdit").click(function() {
+			$(".right-panel").hide("slide", { direction: "left" }, 350);
+			$("#ProfilePanel").animate({width:'toggle'},350);
+
+			$(".container").css("width", "calc(100% - 860px)");
+		})
 
 		var volledigeNaam = surname_array[id] + " " + lastname_array[id];
 
 		$("button.newPost#postStatus").on("click", function(){
 			var status = $("#writeStatus").val();
-			
 			var toevoegen = "<div class='post'><div class='postAuthorIMG' style='background-image: url(imgResources/postAvatars/" + img_array[id] + ");'></div><div class='postAuthor'>"+ volledigeNaam +"</div><div class='postDate'>nu</div><div class='postMessage'>"+status+"</div><div class='postLikes'>	<div class='likeButton'>Duim!</div>	<div class='amountLikes'>0</div></div><div class='postDelete'>Verwijder bericht</div><div class='postCommentInput'><input type='text' class='postCommentInput'></input><button class='postCommentAdd'>Reageren</button></div><div class='postComments'></div></div>";
 			$(".posts").prepend(toevoegen);
 			var amountPosts = $(".middle-panel#StartScreen .Profile .Statsbar #messages span").text();
 			amountPosts++;
 			$(".middle-panel#StartScreen .Profile .Statsbar #messages span").text(amountPosts);
+			$("#writeStatus").removeAttr("value");
 		});
 
 		$("body").on("click", ".likeButton", function(){
@@ -280,13 +280,74 @@ $(document).ready(function(){
 
 		$("body").on("click", ".postDelete", function(){
 			$(this).closest('.post').remove();
+			var amountPosts = $(".middle-panel#StartScreen .Profile .Statsbar #messages span").text();
+			amountPosts--;
+			$(".middle-panel#StartScreen .Profile .Statsbar #messages span").text(amountPosts);
 		});
 
 		$("body").on("click", ".postCommentAdd", function(){
 			var input = $(this).siblings("input.postCommentInput").val();
 			var comment = "<div class='postComment'><div class='commentAuthorIMG' style='background-image: url(imgResources/commentAvatars/"+ img_array[id] +");'></div><div class='commentAuthor'>" + volledigeNaam + "</div><div class='commentMessage'>"+ input +"</div><div class='commentDate'>nu</div><div class='commentDelete'>Verwijder reactie</div></div>";
 			$(this).parent().siblings(".postComments").prepend(comment);
-		});			
+		});		
+
+		$(".right-panel#ProfilePanel img#coverPhoto").attr("src", headerpath);	
+		$(".right-panel#ProfilePanel img#coverPhoto").click(function() {
+
+			function newRandomHeader () {
+				var randomNumber = Math.floor(Math.random()*headimg_array.length);
+				return headimg_array[randomNumber];
+			}	
+			var newHeaderfolder = "imgResources/header_thumb/" ;
+			var newHeaderpath = newHeaderfolder + newRandomHeader();
+			$(".right-panel#ProfilePanel img#coverPhoto").attr("src", newHeaderpath);	
+		})
+		$(".right-panel#ProfilePanel button#saveCover").click(function() {
+			var newHeaderIMG = $(".right-panel#ProfilePanel img#coverPhoto").attr("src");
+			$(".Profile div.headerIMG").css("background-image", "url(" + newHeaderIMG + ")");  
+		})
+
+		$(".right-panel#ProfilePanel img#profilePhoto").attr("src", imgpath);	
+		$(".right-panel#ProfilePanel img#profilePhoto").click(function() {
+
+			function newRandomProfile () {
+				var randomNumber = Math.floor(Math.random()*img_array.length);
+				return img_array[randomNumber];
+			}	
+			var newProfilefolder = "imgResources/avatars/" ;
+			var newProfilepath = newProfilefolder + newRandomProfile();
+			$(".right-panel#ProfilePanel img#profilePhoto").attr("src", newProfilepath);	
+		})
+		$(".right-panel#ProfilePanel button#saveProfile").click(function() {
+			var newHeaderIMG = $(".right-panel#ProfilePanel img#profilePhoto").attr("src");
+			$("img.Profile#profileImg").attr("src", newHeaderIMG); 
+		})
+
+	}
+
+	$(".menuItems #openFriends").click(function () {
+		$(".right-panel").hide("slide", { direction: "left" }, 350);
+		Friendspanel();
+		
+	})
+
+	function Friendspanel () {
+		$("#FriendsList").animate({width:'toggle'},350);
+		$(".container").css("width", "calc(100% - 860px)");
+
+		var i = 0;
+		while(i < 8) {
+			var randomFollowing = Math.floor(Math.random()*user_array.length);
+			var Followinguser = user_array[randomFollowing];
+			var Followingname = surname_array[randomFollowing] + " " + lastname_array[randomFollowing];
+			var Follwingdiv = "<div class='following' id='followingmain'><div class='following' id='followingnames'><span>" + Followingname + "</span> " + Followinguser + "</div><div class='following' id='followingbutton'><div class='following button on'>Volgend!</div><div class='following button off' style='display: none;'>Volgen!</div></div></div>";
+			$("#friends-here").prepend(Follwingdiv);
+			i++;
+		}
+
+		$("body").on("click",".following.button", function () {
+			$(this).parent().children("div").toggle()
+		})
 
 	}
 

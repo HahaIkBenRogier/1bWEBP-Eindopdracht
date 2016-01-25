@@ -11,12 +11,18 @@
 		
 	</head>
 	<body>
-		<div class="left-panel"></div>
+		<div class="left-panel">
+			<div class="menuItems">
+				<div id="openTimeline">TL</div>
+				<div id="openFriends">VR</div>
+				<div id="openMessages">MSG</div>
+			</div>
+		</div>
 		<div class="middle-panel" id="LoginPanel">
 			<div class="Login-form">
 				<img class="Login" id="profileImg">
-				<input type="text" class="Login" id="username" placeholder="Gebruikersnaam"></input>
-				<input type="password" class="Login" id="password" placeholder="Wachtwoord"></input>
+				<input type="text" class="Login" id="username" placeholder="Gebruikersnaam" value="Q"></input>
+				<input type="password" class="Login" id="password" placeholder="Wachtwoord" value="W"></input>
 
 				<p class="LoginError" id="caps" style="display: none;">Je CapsLock staat aan</p>
 				<div id="LoginBlocked">
@@ -37,7 +43,7 @@
 					<p class="Profile" id="username">Gebruikersnaam: <span></span></p>
 					<p class="Profile" id="name">Volledige naam: <span></span></p>
 					<p class="Profile" id="lastconcert">Laaste concert: <span>Kensington, Ziggo Dome (26 november 2015)</span></p>
-					<button class="Profile" id="ProfileEdit">Profiel bewerken</button>
+					<button class="Profile" id="ProfileEdit">Foto's bewerken</button>
 				</div>
 				<div class="Statsbar">
 					<div id="messages"><span>100</span> berichten</div>
@@ -134,7 +140,18 @@
 			</div>
 		</div>
 		<div class="right-panel" id="ProfilePanel">
-			Hoi
+			<h2>Omslagfoto veranderen</h2>
+			<p>Klik op de omslagfoto om hem te veranderen</p>
+			<img src="" width="400" id="coverPhoto">
+			<button id="saveCover">Deze zooi opslaan</button>
+			<h2>Profielfoto veranderen</h2>
+			<p>Hoi tijd om je zooi aan te passen, werkt zoals de vorige</p>
+			<img src="" width="100" height="100" id="profilePhoto">
+			<button id="saveProfile">Deze zooi opslaan</button>
+		</div>
+		<div class="right-panel" id="FriendsList">
+			<h2>Volgend</h2>
+			<div id="friends-here"></div>
 		</div>
 		<div class="container"></div>
 	</body>

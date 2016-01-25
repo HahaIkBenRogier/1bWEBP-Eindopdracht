@@ -1,0 +1,112 @@
+{"ownplaylists": [
+	{
+		"name":"xxxxxxx",
+		"url":"xxxxxxx",
+		"img":"xxxxxxx",
+		"id": "xxxxxxx"
+	},
+	{
+		"name":"xxxxxxx",
+		"url":"xxxxxxx",
+		"img":"xxxxxxx",
+		"id": "xxxxxxx"
+	}
+]},
+{"artistfavorites": [
+	{
+		"name":"xxxxxxx",
+		"url":"xxxxxxx",
+		"img":"xxxxxxx",
+		"id": "xxxxxxx"
+	},
+	{
+		"name":"xxxxxxx",
+		"url":"xxxxxxx",
+		"img":"xxxxxxx",
+		"id": "xxxxxxx"
+	}
+]},
+{"discover-f": [
+	{
+		"name":"xxxxxxx",
+		"url":"xxxxxxx",
+		"img":"xxxxxxx",
+		"id": "xxxxxxx"
+	},
+	{
+		"name":"xxxxxxx",
+		"url":"xxxxxxx",
+		"img":"xxxxxxx",
+		"id": "xxxxxxx"
+	}
+]},
+{"tophits-f": [
+	{
+		"name":"xxxxxxx",
+		"url":"xxxxxxx",
+		"img":"xxxxxxx",
+		"id": "xxxxxxx"
+	},
+	{
+		"name":"xxxxxxx",
+		"url":"xxxxxxx",
+		"img":"xxxxxxx",
+		"id": "xxxxxxx"
+	}
+]},
+{"spinnin-f": [
+	{
+		"name":"xxxxxxx",
+		"url":"xxxxxxx",
+		"img":"xxxxxxx",
+		"id": "xxxxxxx"
+	},
+	{
+		"name":"xxxxxxx",
+		"url":"xxxxxxx",
+		"img":"xxxxxxx",
+		"id": "xxxxxxx"
+	}
+]},
+{"teluisteren-f": [
+	{
+		"name":"xxxxxxx",
+		"url":"xxxxxxx",
+		"img":"xxxxxxx",
+		"id": "xxxxxxx"
+	},
+	{
+		"name":"xxxxxxx",
+		"url":"xxxxxxx",
+		"img":"xxxxxxx",
+		"id": "xxxxxxx"
+	}
+]},
+{"misc": [
+	{
+		"name":"xxxxxxx",
+		"url":"xxxxxxx",
+		"img":"xxxxxxx",
+		"id": "xxxxxxx"
+	},
+	{
+		"name":"xxxxxxx",
+		"url":"xxxxxxx",
+		"img":"xxxxxxx",
+		"id": "xxxxxxx"
+	}
+]},
+{"archive": [
+	{
+		"name":"xxxxxxx",
+		"url":"xxxxxxx",
+		"img":"xxxxxxx",
+		"id": "xxxxxxx"
+	},
+	{
+		"name":"xxxxxxx",
+		"url":"xxxxxxx",
+		"img":"xxxxxxx",
+		"id": "xxxxxxx"
+	}
+]}
