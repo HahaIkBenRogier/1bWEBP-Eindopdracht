@@ -27,7 +27,8 @@ var user_array = 	[	"Rogier",
 						"RogierWasHier", 				
 						"SNGRS", 			
 						"HahaIkBenRogier",
-						"Q"	];
+						"Q",
+						"kakhiel"	];
 
 var pw_array = 		[	"qwerty", 							
 						"adalovelace",			
@@ -40,7 +41,8 @@ var pw_array = 		[	"qwerty",
 						"Koffie", 							
 						"HU", 				
 						"PerryHetVogelbekdier",
-						"W"	];
+						"W",
+						"hahanee"	];
 
 var img_array = 	[	"Rogier.jpg", 						
 						"Hekman.jpg", 			
@@ -53,7 +55,8 @@ var img_array = 	[	"Rogier.jpg",
 						"RogierWasHier.jpg", 			
 						"SNGRS.jpg",		
 						"HahaIkBenRogier.jpg",
-						"HahaIkBenRogier.jpg"	];
+						"HahaIkBenRogier.jpg",
+						"kakhiel.jpg"	];
 
 var mail_array =	[	"rogier.sangers@student.hu.nl",	
 						"erik.hekman@hu.nl",	
@@ -66,20 +69,22 @@ var mail_array =	[	"rogier.sangers@student.hu.nl",
 						"rogierwashier@facebook.com",	
 						"mail@sngrs.com",	
 						"shf-adm0@sngrs.com",
-						""	];
+						"jkghfidhsd",
+						"kakhiel@gmail.com"	];
 
-var surname_array =	[	"Rogier",
+var surname_array =	[	"Roger",
 						"Erik",
 						"Guus",
 						"Erik",
 						"Thijs",
 						"Ronald",
 						"Ronald",
+						"Rutger",
+						"Roger",
 						"Rogier",
-						"Rogier",
-						"Rogier",
-						"Rogier",
-						"Rogier"	]
+						"Reinier",
+						"Roger",
+						"Kakhiel"	]
 
 var lastname_array =	["Sangers",
 						"Hekman",
@@ -89,9 +94,10 @@ var lastname_array =	["Sangers",
 						"van Essen",
 						"van Essen",
 						"Sangers",
+						"Grassen",
 						"Sangers",
-						"Sangers",
-						"Sangers",
-						"Grassen"	]
+						"Grassen",
+						"Grassen",
+						""	]
 
 

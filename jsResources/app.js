@@ -328,11 +328,19 @@ $(document).ready(function(){
 	$(".menuItems #openFriends").click(function () {
 		$(".right-panel").hide("slide", { direction: "left" }, 350);
 		Friendspanel();
-		
+	})
+
+	$(".menuItems #openTimeline").click(function () {
+		$(".right-panel").hide("slide", { direction: "left" }, 350);
+	})
+
+	$(".menuItems #openMessages").click(function () {
+		$(".right-panel").hide("slide", { direction: "left" }, 350);
+		MessagesPanel();
 	})
 
 	function Friendspanel () {
-		$("#FriendsList").animate({width:'toggle'},350);
+		$(".right-panel#FriendsList").animate({width:'toggle'},350);
 		$(".container").css("width", "calc(100% - 860px)");
 
 		var i = 0;
@@ -349,6 +357,24 @@ $(document).ready(function(){
 			$(this).parent().children("div").toggle()
 		})
 
+	}
+
+	function MessagesPanel () {
+		$(".right-panel#MessagesPanel").animate({width:'toggle'},350);
+		for (var i = user_array.length - 1; i >= 0; i--) {
+			var Msgdiv =  "<div>" + surname_array[i] + " " + lastname_array[i] + "</div>";
+			$(".PeopleToMessageWith").append(Msgdiv);
+		}
+
+		$(".convo button").click(function() {
+			console.log("click")
+			var msgText = $(".convo textarea#msgfield").val();
+			console.log(msgText)
+			var msgDiv = "<div class='convo msg right'><span>" + msgText + "</span></div>";
+			console.log(msgDiv)
+			$(".convo div.convo-field").prepend(msgDiv);
+			console.log(msgDiv)
+		})
 	}
 
 })

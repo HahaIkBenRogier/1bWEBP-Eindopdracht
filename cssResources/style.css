@@ -288,8 +288,47 @@ body {
 	height: 50px;
 }
 
+#MessagesPanel .PeopleToMessageWith {
+	width: 400px;
+	height: 300px;
+	overflow: auto;
+	background-color: white;
+}
+
+#MessagesPanel .PeopleToMessageWith div {
+	float: left;
+	width: 200px;
+}
+
+#MessagePanel .convo .convo-field {
+	overflow: auto;
+}
+
+.convo.msg {
+	width: 400px;
+	overflow: auto;
+}
+
+.convo.msg.left span {
+	background-color: blue;
+	overflow: auto;
+	text-align: left;
+	float: left;
+	margin: 5px;
+    padding: 10px;
+}
+
+.convo.msg.right span {
+	background-color: white;
+	overflow: auto;
+	text-align: right;
+	float: right;
+	margin: 5px;
+    padding: 10px;
+}
+
 .container {
-	width: calc(100% - 460px);
+	width: calc(100% - 860px);
 	height: 100vh;
 	background-color: rgba(0, 0, 0, 0);
 	float: left;
