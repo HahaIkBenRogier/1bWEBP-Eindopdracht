@@ -44,7 +44,7 @@ var pw_array = 		[	"qwerty",
 						"W",
 						"hahanee"	];
 
-var img_array = 	[	"Rogier.jpg", 						
+var img_array = 	[	"Rogier.png", 						
 						"Hekman.jpg", 			
 						"Koning.jpg",		
 						"ErikHekman.jpeg",		

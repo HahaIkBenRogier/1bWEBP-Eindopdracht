@@ -189,7 +189,6 @@ $(document).ready(function(){
 
 	function R_validateField (field, value) {
 		$("#"+field).removeAttr("style");
-		console.log(field + " -- " + value)
 		if (!value) { R_errorLogin(field, "empty")	}
 		else {	R_credentialsCheck(field, value);	}
 	}
@@ -218,6 +217,8 @@ $(document).ready(function(){
 			pw_array.push(password_input);
 			img_array.push(picture_input);
 			mail_array.push(mail_input);
+			surname_array.push(surname_input);
+			lastname_array.push(lastname_input);
 			$("#StartScreen").css("display", "block");
 			$("#LoginPanel").removeAttr("style");
 			StartScreen(user_array.length - 1);
@@ -372,5 +373,10 @@ $(document).ready(function(){
 			$(".convo div.convo-field").prepend(msgDiv);
 		})
 	}
+
+	// Popout image 
+	$("img.lb").click(function(e) {
+		$(".lb").toggleClass("pop"); 
+	});
 
 })
