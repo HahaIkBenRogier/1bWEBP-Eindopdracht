@@ -367,13 +367,9 @@ $(document).ready(function(){
 		}
 
 		$(".convo button").click(function() {
-			console.log("click")
 			var msgText = $(".convo textarea#msgfield").val();
-			console.log(msgText)
 			var msgDiv = "<div class='convo msg right'><span>" + msgText + "</span></div>";
-			console.log(msgDiv)
 			$(".convo div.convo-field").prepend(msgDiv);
-			console.log(msgDiv)
 		})
 	}
 
